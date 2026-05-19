@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#fbe8d3"/>
+  <!-- Amandel 1 -->
+  <ellipse cx="38" cy="48" rx="10" ry="16" fill="#d4a574" transform="rotate(-15 38 48)"/>
+  <ellipse cx="35" cy="44" rx="3" ry="6" fill="#e8c89a" transform="rotate(-15 35 44)" opacity="0.7"/>
+  <!-- Amandel 2 -->
+  <ellipse cx="58" cy="40" rx="10" ry="16" fill="#d4a574" transform="rotate(20 58 40)"/>
+  <ellipse cx="55" cy="36" rx="3" ry="6" fill="#e8c89a" transform="rotate(20 55 36)" opacity="0.7"/>
+  <!-- Amandel 3 -->
+  <ellipse cx="52" cy="62" rx="10" ry="16" fill="#c8965f" transform="rotate(-5 52 62)"/>
+  <ellipse cx="49" cy="58" rx="3" ry="6" fill="#dcb888" transform="rotate(-5 49 58)" opacity="0.7"/>
+</svg>

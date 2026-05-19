@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Bovenste petalen -->
+  <path d="M100 30 Q60 50 65 100 Q80 95 100 100 Q120 95 135 100 Q140 50 100 30" fill="#e91e63"/>
+  <path d="M100 30 Q70 45 70 90 Q85 85 100 90 Q115 85 130 90 Q130 45 100 30" fill="#c2185b" opacity="0.7"/>
+  <!-- Onderste petalen -->
+  <path d="M100 100 Q70 140 65 170 Q85 160 100 170 Q115 160 135 170 Q130 140 100 100" fill="#c2185b"/>
+  <path d="M100 100 Q80 135 75 160 Q90 152 100 160 Q110 152 125 160 Q120 135 100 100" fill="#a01548" opacity="0.6"/>
+  <!-- Stamper -->
+  <circle cx="100" cy="100" r="6" fill="#b08947"/>
+  <circle cx="100" cy="100" r="3" fill="#8a6a35"/>
+  <!-- Pollen toetsjes -->
+  <circle cx="92" cy="93" r="1.5" fill="#fbe8d3"/>
+  <circle cx="108" cy="93" r="1.5" fill="#fbe8d3"/>
+  <circle cx="100" cy="107" r="1.5" fill="#fbe8d3"/>
+</svg>

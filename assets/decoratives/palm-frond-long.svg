@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Hoofdsteel -->
+  <path d="M100 10 L100 290" stroke="#2d5a3d" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bladpunten links -->
+  <path d="M100 30 Q70 35 50 60" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 60 Q65 65 40 95" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 95 Q60 100 30 135" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 135 Q58 140 25 180" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 180 Q60 185 30 220" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 220 Q65 225 40 250" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 250 Q75 255 60 275" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Bladpunten rechts -->
+  <path d="M100 30 Q130 35 150 60" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 60 Q135 65 160 95" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 95 Q140 100 170 135" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 135 Q142 140 175 180" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 180 Q140 185 170 220" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 220 Q135 225 160 250" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M100 250 Q125 255 140 275" stroke="#2d5a3d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

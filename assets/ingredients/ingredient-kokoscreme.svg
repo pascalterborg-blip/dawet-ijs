@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#fbe8d3"/>
+  <!-- Kommetje -->
+  <ellipse cx="50" cy="68" rx="32" ry="20" fill="#d4a574"/>
+  <path d="M18 68 Q18 88 50 88 Q82 88 82 68" fill="#a87f4e"/>
+  <!-- Crème -->
+  <ellipse cx="50" cy="64" rx="28" ry="10" fill="#ffffff"/>
+  <path d="M22 64 Q30 58 40 60 Q50 56 60 60 Q70 58 78 64" fill="none" stroke="#fafafa" stroke-width="2"/>
+  <!-- Pieken -->
+  <path d="M35 58 L37 52 L39 58" fill="#ffffff"/>
+  <path d="M55 56 L57 50 L59 56" fill="#ffffff"/>
+</svg>

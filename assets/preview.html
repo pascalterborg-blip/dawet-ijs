@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Dawet IJs — Asset Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: #fdeef0;
+    color: #4a2530;
+    padding: 40px;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #c2185b;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #6b3a47;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #c2185b;
+    font-size: 22px;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(194, 24, 91, 0.2);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  .grid.wide { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .asset {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(194, 24, 91, 0.08);
+  }
+  .asset.dark { background: #4a2530; }
+  .asset img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 12px;
+  }
+  .asset .filename {
+    font-family: monospace;
+    font-size: 10px;
+    color: #6b3a47;
+    word-break: break-all;
+  }
+  .asset.dark .filename { color: #fdeef0; }
+  .note {
+    background: #fbe8d3;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6b3a47;
+    line-height: 1.6;
+  }
+  .note strong { color: #c2185b; }
+</style>
+</head>
+<body>
+
+<h1>Asset Preview</h1>
+<p class="subtitle">Alle SVG's klaar voor gebruik in Cursor</p>
+
+<h2>Logo (4 varianten)</h2>
+<div class="grid wide">
+  <div class="asset">
+    <img src="logo/logo-horizontal.svg" alt="">
+    <div class="filename">logo/logo-horizontal.svg</div>
+  </div>
+  <div class="asset">
+    <img src="logo/logo-vertical.svg" alt="">
+    <div class="filename">logo/logo-vertical.svg</div>
+  </div>
+  <div class="asset">
+    <img src="logo/logo-icon.svg" alt="">
+    <div class="filename">logo/logo-icon.svg</div>
+  </div>
+  <div class="asset dark">
+    <img src="logo/logo-horizontal-light.svg" alt="">
+    <div class="filename">logo/logo-horizontal-light.svg</div>
+  </div>
+</div>
+
+<h2>Functionele iconen</h2>
+<div class="grid">
+  <div class="asset">
+    <img src="icons/check-circle.svg" alt="">
+    <div class="filename">check-circle.svg</div>
+  </div>
+  <div class="asset">
+    <img src="icons/heart.svg" alt="">
+    <div class="filename">heart.svg</div>
+  </div>
+  <div class="asset">
+    <img src="icons/calendar.svg" alt="">
+    <div class="filename">calendar.svg</div>
+  </div>
+  <div class="asset">
+    <img src="icons/envelope.svg" alt="">
+    <div class="filename">envelope.svg</div>
+  </div>
+  <div class="asset">
+    <img src="icons/ornament-left.svg" alt="">
+    <div class="filename">ornament-left.svg</div>
+  </div>
+  <div class="asset">
+    <img src="icons/ornament-right.svg" alt="">
+    <div class="filename">ornament-right.svg</div>
+  </div>
+</div>
+
+<h2>Decoratieve elementen</h2>
+<div class="grid wide">
+  <div class="asset">
+    <img src="decoratives/hibiscus-large.svg" alt="">
+    <div class="filename">hibiscus-large.svg</div>
+  </div>
+  <div class="asset">
+    <img src="decoratives/hibiscus-small.svg" alt="">
+    <div class="filename">hibiscus-small.svg</div>
+  </div>
+  <div class="asset">
+    <img src="decoratives/palm-frond-long.svg" alt="">
+    <div class="filename">palm-frond-long.svg</div>
+  </div>
+  <div class="asset">
+    <img src="decoratives/palm-fan.svg" alt="">
+    <div class="filename">palm-fan.svg</div>
+  </div>
+</div>
+
+<h2>Benefit iconen (de 4 cirkels in de hero)</h2>
+<div class="grid">
+  <div class="asset">
+    <img src="benefits/benefit-coconut.svg" alt="">
+    <div class="filename">benefit-coconut.svg</div>
+  </div>
+  <div class="asset">
+    <img src="benefits/benefit-almond.svg" alt="">
+    <div class="filename">benefit-almond.svg</div>
+  </div>
+  <div class="asset">
+    <img src="benefits/benefit-natural.svg" alt="">
+    <div class="filename">benefit-natural.svg</div>
+  </div>
+  <div class="asset">
+    <img src="benefits/benefit-no-sugar.svg" alt="">
+    <div class="filename">benefit-no-sugar.svg</div>
+  </div>
+</div>
+
+<h2>Ingrediënt illustraties (alternatief voor foto's)</h2>
+<div class="grid">
+  <div class="asset">
+    <img src="ingredients/ingredient-kokosmelk.svg" alt="">
+    <div class="filename">kokosmelk.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-kokoscreme.svg" alt="">
+    <div class="filename">kokoscreme.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-amandeldrink.svg" alt="">
+    <div class="filename">amandeldrink.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-verse-kokos.svg" alt="">
+    <div class="filename">verse-kokos.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-dadelsiroop.svg" alt="">
+    <div class="filename">dadelsiroop.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-amandel.svg" alt="">
+    <div class="filename">amandel.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-rozenwater.svg" alt="">
+    <div class="filename">rozenwater.svg</div>
+  </div>
+  <div class="asset">
+    <img src="ingredients/ingredient-aromas.svg" alt="">
+    <div class="filename">aromas.svg</div>
+  </div>
+</div>
+
+<h2>Social</h2>
+<div class="grid">
+  <div class="asset">
+    <img src="social/tiktok.svg" alt="" style="max-height: 40px;">
+    <div class="filename">tiktok.svg</div>
+  </div>
+  <div class="asset">
+    <img src="social/instagram.svg" alt="" style="max-height: 40px;">
+    <div class="filename">instagram.svg</div>
+  </div>
+</div>
+
+<div class="note">
+  <strong>Let op:</strong> De ingrediënt-illustraties zijn een tussenoplossing als je nog geen fotografie hebt. Voor de finale website raad ik echte foto's aan (warm licht, transparante achtergrond) — die matchen beter met de premium uitstraling van het origineel. Voor andere assets (logo, iconen, decoratie) zijn deze SVG's wel definitief bruikbaar.
+</div>
+
+</body>
+</html>

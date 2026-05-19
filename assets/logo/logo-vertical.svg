@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <!-- Palm boom icoon -->
+  <g transform="translate(35, 5)">
+    <path d="M25 10 Q17 18 20 32 Q13 24 4 24 Q12 32 12 42 Q4 36 -6 36 Q4 42 8 50" stroke="#c2185b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25 10 Q33 18 30 32 Q37 24 46 24 Q38 32 38 42 Q46 36 56 36 Q46 42 42 50" stroke="#c2185b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="55" r="3.5" fill="#c2185b"/>
+    <path d="M25 58 L22 88 L28 88 Z" fill="#c2185b"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="60" y="120" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="32" fill="#c2185b" letter-spacing="1">DAWET</text>
+  <text x="60" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="32" fill="#c2185b" letter-spacing="2">IJS</text>
+</svg>

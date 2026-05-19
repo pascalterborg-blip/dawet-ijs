@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#fbe8d3"/>
+  <!-- Kokos buitenkant -->
+  <circle cx="50" cy="50" r="32" fill="#6b4423"/>
+  <!-- Vezels textuur -->
+  <path d="M30 30 Q35 35 32 45 M65 28 Q60 35 65 45 M30 65 Q35 60 30 50 M70 65 Q65 60 70 50" stroke="#4a2d15" stroke-width="0.8" fill="none"/>
+  <!-- Binnenkant - vlees -->
+  <ellipse cx="50" cy="48" rx="22" ry="20" fill="#ffffff"/>
+  <!-- Holte -->
+  <ellipse cx="50" cy="52" rx="10" ry="8" fill="#f5e6d0"/>
+  <!-- Schaduw rand -->
+  <ellipse cx="50" cy="48" rx="22" ry="20" fill="none" stroke="#e8d4a8" stroke-width="1"/>
+</svg>

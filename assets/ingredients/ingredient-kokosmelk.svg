@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#fbe8d3"/>
+  <!-- Glas -->
+  <path d="M32 25 L34 75 Q34 80 50 80 Q66 80 66 75 L68 25 Z" fill="#ffffff" stroke="#6b3a47" stroke-width="1.5"/>
+  <!-- Melk in glas -->
+  <path d="M33 35 L34.5 73 Q34.5 78 50 78 Q65.5 78 65.5 73 L67 35 Z" fill="#fafafa"/>
+  <!-- Highlight -->
+  <path d="M38 30 L37 70" stroke="#ffffff" stroke-width="2" opacity="0.7"/>
+  <!-- Decoratie kokosstukje -->
+  <ellipse cx="50" cy="32" rx="6" ry="3" fill="#ffffff" stroke="#d4a574" stroke-width="0.8"/>
+</svg>

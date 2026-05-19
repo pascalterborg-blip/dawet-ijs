@@ -1,4 +1,4 @@
-"""Hero packaging cutout with soft edges (rembg + alpha refine)."""
+"""Legacy rembg cutout — removes plastic wrap. Use remove_checkerboard.py instead."""
 import io
 from pathlib import Path
 

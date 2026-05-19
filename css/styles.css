@@ -167,9 +167,9 @@ a:hover {
 
 .logo-link img {
   display: block;
-  height: 48px;
+  height: clamp(40px, 10vw, 52px);
   width: auto;
-  max-width: min(150px, 42vw);
+  max-width: min(240px, 62vw);
 }
 
 .nav-toggle {
@@ -828,8 +828,11 @@ a:hover {
   text-align: center;
 }
 
-.quote-card .logo-icon {
-  width: 48px;
+.quote-card .quote-card__logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 100%;
   margin: 0 auto 1rem;
 }
 
@@ -1080,7 +1083,9 @@ a:hover {
 }
 
 .footer-brand img {
-  height: 56px;
+  height: clamp(48px, 12vw, 64px);
+  width: auto;
+  max-width: min(280px, 85vw);
   margin-bottom: 1rem;
 }
 

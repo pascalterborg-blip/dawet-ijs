@@ -76,3 +76,27 @@ git push
 ```
 
 Cloudflare bouwt automatisch opnieuw na elke push naar `main`.
+
+## Nieuwsbrief (aanmeldingen)
+
+De site gebruikt **Mailchannels** via de Worker (geen FormSubmit meer).
+
+### 1. E-mailadres als secret (verplicht)
+
+Cloudflare-dashboard → **Workers & Pages** → **dawet-ijs** → **Settings** → **Variables and Secrets** → **Add**:
+
+| Naam | Type | Waarde |
+|------|------|--------|
+| `NEWSLETTER_EMAIL` | Secret | Gmail-adres van Euredice |
+
+Of lokaal: `npx wrangler secret put NEWSLETTER_EMAIL`
+
+### 2. DNS voor verzenden (eenmalig)
+
+Bij **dawetijs.nl** → **DNS** → voeg toe (als die nog niet bestaat):
+
+| Type | Naam | Inhoud |
+|------|------|--------|
+| TXT | `@` | `v=spf1 include:relay.mailchannels.net ~all` |
+
+Daarna opnieuw deployen als je alleen het secret hebt toegevoegd.

@@ -32,7 +32,7 @@ npx serve .
 
 ## Nieuwsbrief
 
-Nieuwsbrief-aanmeldingen gaan via [FormSubmit](https://formsubmit.co). Het ontvanger-adres staat alleen in de form `action` in `index.html` (niet zichtbaar op de pagina). Na de eerste testaanmelding moet Euredice het adres bevestigen via de mail van FormSubmit.
+Nieuwsbrief-aanmeldingen gaan via de Cloudflare Worker + [Mailchannels](https://www.mailchannels.com/). Stel `NEWSLETTER_EMAIL` in als secret in Cloudflare (zie `DEPLOY.md`). Het adres staat niet op de website.
 
 ## Afbeeldingen
 

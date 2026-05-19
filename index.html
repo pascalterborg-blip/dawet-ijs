@@ -365,11 +365,13 @@
         <img src="assets/icons/envelope.svg" alt="" width="24" height="24">
         Blijf als eerste op de hoogte!
       </p>
-      <form class="newsletter-form" action="https://formsubmit.co/Euredice.Wijnaldum@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nieuwsbrief Dawet IJs: nieuwe aanmelding">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://dawetijs.nl/#contact">
+      <p class="newsletter-feedback newsletter-feedback--ok" id="newsletter-ok" hidden role="status">
+        Bedankt! Je bent aangemeld. We nemen contact op via e-mail.
+      </p>
+      <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-err" hidden role="alert">
+        Aanmelden lukte niet. Probeer het later opnieuw of stuur een bericht via TikTok.
+      </p>
+      <form class="newsletter-form" action="/api/aanmelden" method="POST">
         <label for="email" class="visually-hidden">E-mailadres</label>
         <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Aanmelden</button>
@@ -454,6 +456,17 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var ok = document.getElementById('newsletter-ok');
+      var err = document.getElementById('newsletter-err');
+      if (params.get('bedankt') === '1' && ok) {
+        ok.hidden = false;
+      } else if (params.get('fout') && err) {
+        err.hidden = false;
+      }
+    })();
   </script>
 </body>
 </html>

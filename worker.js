@@ -1,6 +1,6 @@
 /**
- * Serves static assets and handles newsletter signups without exposing the inbox in HTML.
- * Set secret: wrangler secret put NEWSLETTER_EMAIL
+ * Static site + newsletter via Mailchannels (geen FormSubmit).
+ * Zet in Cloudflare: Workers → dawet-ijs → Settings → Secrets → NEWSLETTER_EMAIL
  */
 export default {
   async fetch(request, env) {
@@ -17,28 +17,43 @@ export default {
 async function handleNewsletter(request, env, url) {
   const to = env.NEWSLETTER_EMAIL;
   if (!to) {
-    return new Response("Newsletter not configured", { status: 503 });
+    return Response.redirect(`${url.origin}/?fout=config#contact`, 303);
   }
 
   const form = await request.formData();
   const email = String(form.get("email") || "").trim();
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return Response.redirect(`${url.origin}/#contact`, 303);
+    return Response.redirect(`${url.origin}/?fout=email#contact`, 303);
   }
 
-  await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+  const sent = await sendViaMailchannels(to, email);
+  if (!sent) {
+    return Response.redirect(`${url.origin}/?fout=verzenden#contact`, 303);
+  }
+
+  return Response.redirect(`${url.origin}/?bedankt=1#contact`, 303);
+}
+
+async function sendViaMailchannels(to, subscriberEmail) {
+  const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      email,
-      _subject: "Nieuwsbrief Dawet IJs: nieuwe aanmelding",
-      _captcha: "false",
-      _template: "table",
+      personalizations: [{ to: [{ email: to }] }],
+      from: {
+        email: "nieuwsbrief@dawetijs.nl",
+        name: "Dawet IJs",
+      },
+      reply_to: { email: subscriberEmail },
+      subject: "Nieuwe nieuwsbriefaanmelding Dawet IJs",
+      content: [
+        {
+          type: "text/plain",
+          value: `Nieuwe aanmelding via dawetijs.nl\n\nE-mailadres: ${subscriberEmail}`,
+        },
+      ],
     }),
   });
 
-  return Response.redirect(`${url.origin}/#contact`, 303);
+  return response.ok;
 }

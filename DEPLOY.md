@@ -38,18 +38,27 @@ Bij de eerste push vraagt Git om in te loggen (browser of Personal Access Token)
 2. **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
 3. Kies **GitHub** en autoriseer Cloudflare
 4. Selecteer je repository (`dawet-ijs` / `euredice-kitchen`)
-5. Build settings:
+5. Build settings (als je **Wrangler/Worker** gebruikt, zoals nu):
 
 | Veld | Waarde |
 |------|--------|
 | **Production branch** | `main` |
-| **Framework preset** | None |
-| **Build command** | *(leeg laten)* |
-| **Build output directory** | `/` |
+| **Build command** | `npx wrangler deploy` |
+| **Build output directory** | *(niet van toepassing bij wrangler)* |
+
+Of voor klassieke **Pages** (eenvoudiger): build command **leeg**, output **`/`**.
 
 6. Klik **Save and Deploy**
 
-Na ~1 minuut krijg je een URL zoals: `https://dawet-ijs.pages.dev`
+Je Workers-URL is bijv.: `https://dawet-ijs.pascal-terborg.workers.dev`
+
+### Domein `dawetijs.nl` (Error 522 oplossen)
+
+522 = DNS wijst nog naar een **oude server**, niet naar je Worker/Pages.
+
+1. **Workers & Pages** → **dawet-ijs** → **Settings** → **Domains & routes** → **Add custom domain** → `dawetijs.nl` en `www.dawetijs.nl`
+2. **Websites** → **dawetijs.nl** → **DNS**: verwijder oude **A-records** naar een hosting-IP
+3. Laat Cloudflare de CNAME naar je Worker/Pages zetten (oranje wolk aan)
 
 ## Stap 4 — Eigen domein (optioneel)
 

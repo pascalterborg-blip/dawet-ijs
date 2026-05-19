@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dawet-ijs",
+  "compatibility_date": "2026-05-19",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      ".git/**",
+      ".wrangler/**",
+      "design/**",
+      "DEPLOY.md",
+      "README.md",
+      "assets/preview.html",
+      "assets/README.md"
+    ]
+  }
+}

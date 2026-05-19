@@ -957,40 +957,75 @@ a:hover {
   width: min(200px, 35vw);
 }
 
-/* Newsletter */
-.newsletter-bar {
+/* Contact */
+#contact {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+.contact-section {
   background: var(--pink-soft);
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
 }
 
-.newsletter-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+.contact-section__inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
-.newsletter-inner .label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+.contact-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--pink-deep);
+  margin-bottom: 0.75rem;
 }
 
-.newsletter-inner .label img {
-  width: 24px;
+.contact-section__intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-channels {
+  margin-bottom: 2rem;
+}
+
+.contact-channels__tiktok {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-channels__tiktok img {
+  filter: brightness(0) invert(1);
+}
+
+.contact-newsletter {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(194, 24, 91, 0.15);
+}
+
+.contact-newsletter__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--pink-deep);
+  margin-bottom: 0.35rem;
+}
+
+.contact-newsletter__text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 .newsletter-form {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  flex: 1;
+  justify-content: center;
   max-width: 420px;
+  margin-inline: auto;
 }
 
 .newsletter-form input[type="email"] {

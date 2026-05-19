@@ -358,24 +358,37 @@
     </section>
   </main>
 
-  <!-- Newsletter -->
-  <section class="newsletter-bar" id="contact" aria-label="Contact">
-    <div class="container newsletter-inner">
-      <p class="label">
-        <img src="assets/icons/envelope.svg" alt="" width="24" height="24">
-        Blijf als eerste op de hoogte!
+  <!-- Contact -->
+  <section class="contact-section" id="contact" aria-label="Contact">
+    <div class="container contact-section__inner">
+      <h2 class="contact-section__title">Contact</h2>
+      <p class="contact-section__intro">
+        Vragen over Dawet IJs, verkooppunten of samenwerking? Stuur ons een bericht via TikTok.
+        Wil je op de hoogte blijven van nieuws en proeverijen? Schrijf je hieronder in.
       </p>
-      <p class="newsletter-feedback newsletter-feedback--ok" id="newsletter-ok" hidden role="status">
-        Bedankt! Je bent aangemeld. We nemen contact op via e-mail.
-      </p>
-      <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-err" hidden role="alert">
-        Aanmelden lukte niet. Probeer het later opnieuw of stuur een bericht via TikTok.
-      </p>
-      <form class="newsletter-form" action="/api/aanmelden" method="POST">
-        <label for="email" class="visually-hidden">E-mailadres</label>
-        <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
-        <button type="submit" class="btn btn-primary">Aanmelden</button>
-      </form>
+
+      <div class="contact-channels">
+        <a href="https://www.tiktok.com/@eur273" class="btn btn-primary contact-channels__tiktok" target="_blank" rel="noopener noreferrer">
+          <img src="assets/social/tiktok.svg" alt="" width="22" height="22">
+          Bericht via TikTok (@eur273)
+        </a>
+      </div>
+
+      <div class="contact-newsletter" id="nieuwsbrief">
+        <h3 class="contact-newsletter__title">Nieuwsbrief</h3>
+        <p class="contact-newsletter__text">Blijf als eerste op de hoogte van Dawet IJs.</p>
+        <p class="newsletter-feedback newsletter-feedback--ok" id="newsletter-ok" hidden role="status">
+          Bedankt! Je bent aangemeld.
+        </p>
+        <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-err" hidden role="alert">
+          Aanmelden lukte niet. Probeer het later opnieuw of stuur een bericht via TikTok.
+        </p>
+        <form class="newsletter-form" action="/api/aanmelden" method="POST">
+          <label for="email" class="visually-hidden">E-mailadres voor de nieuwsbrief</label>
+          <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
+          <button type="submit" class="btn btn-primary">Aanmelden</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -426,7 +439,7 @@
       <img src="assets/social/tiktok.svg" alt="" width="22" height="22">
       TikTok
     </a>
-    <a href="#contact" class="mobile-bar__cta btn btn-primary">Op de hoogte blijven</a>
+    <a href="#contact" class="mobile-bar__cta btn btn-primary">Contact</a>
   </aside>
 
   <style>

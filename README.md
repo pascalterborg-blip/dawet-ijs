@@ -32,7 +32,13 @@ npx serve .
 
 ## Nieuwsbrief
 
-Het formulier gebruikt [FormSubmit](https://formsubmit.co) en stuurt aanmeldingen naar `Euredice.Wijnaldum@gmail.com`. Na de eerste testaanmelding moet je het adres bevestigen via de e-mail van FormSubmit.
+Nieuwsbrief-aanmeldingen gaan via `/api/aanmelden` (Cloudflare Worker). Het e-mailadres staat **niet** op de website; stel het in als secret:
+
+```powershell
+npx wrangler secret put NEWSLETTER_EMAIL
+```
+
+Gebruik daarna het Gmail-adres van Euredice. Bevestig FormSubmit nog eenmalig via de mail die je na de eerste aanmelding ontvangt.
 
 ## Afbeeldingen
 

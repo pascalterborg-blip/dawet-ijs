@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dawet-ijs",
+  "main": "worker.js",
   "compatibility_date": "2026-05-19",
   "assets": {
     "directory": ".",
@@ -10,6 +11,8 @@
       "design/**",
       "DEPLOY.md",
       "README.md",
+      "worker.js",
+      "scripts/**",
       "assets/preview.html",
       "assets/README.md"
     ]

@@ -287,7 +287,32 @@ a:hover {
   justify-content: center;
 }
 
-/* Hero showcase — logo + orbiting ingredients (no duplicate photo) */
+/* Hero — productfoto verpakking */
+.hero-product {
+  position: relative;
+  width: min(100%, 420px);
+  margin-inline: auto;
+}
+
+.hero-product__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 48px rgba(74, 37, 48, 0.18);
+  background: var(--white);
+}
+
+.hero-product__decor {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  width: 72px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(194, 24, 91, 0.2));
+}
+
+/* Legacy showcase (unused) */
 .hero-showcase {
   position: relative;
   width: min(100%, 340px);
@@ -624,20 +649,20 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-.product-badge {
-  width: 88px;
-  height: 88px;
+.product-photo {
+  width: 112px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, var(--pink-paper), var(--pink-soft));
-  border-radius: 50%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
   box-shadow: var(--shadow);
+  background: var(--white);
 }
 
-.product-badge img {
-  width: 56px;
+.product-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 .assortiment-product h3 {
@@ -667,62 +692,19 @@ a:hover {
   border: 1px solid rgba(194, 24, 91, 0.12);
 }
 
-.flavor-canvas {
-  position: relative;
-  min-height: 280px;
-  background: linear-gradient(160deg, var(--pink-soft) 0%, var(--white) 55%, var(--pink-paper) 100%);
+.product-label-card {
+  max-width: 360px;
+  margin-inline: auto;
   border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem 1.25rem;
-}
-
-.flavor-canvas__palm {
-  position: absolute;
-  top: -10px;
-  right: -20px;
-  opacity: 0.35;
-  transform: rotate(12deg);
-  pointer-events: none;
-}
-
-.flavor-canvas__core {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.flavor-canvas__core img {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  padding: 6px;
   background: var(--white);
-  border-radius: 50%;
-  box-shadow: var(--shadow);
 }
 
-.flavor-canvas__core img:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
-.flavor-canvas__core img:nth-child(2) { right: 0; top: 50%; transform: translateY(-50%); }
-.flavor-canvas__core img:nth-child(3) { bottom: 0; left: 50%; transform: translateX(-50%); }
-.flavor-canvas__core img:nth-child(4) { left: 0; top: 50%; transform: translateY(-50%); }
-
-.flavor-canvas__caption {
-  margin-top: 1rem;
-  font-family: var(--font-script);
-  font-size: 1.35rem;
-  color: var(--pink-deep);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.portrait-frame__photo {
-  filter: contrast(1.03) saturate(1.02);
+.product-label-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .quote-card {
@@ -1125,24 +1107,8 @@ a:hover {
     order: -1;
   }
 
-  .hero-showcase {
-    width: min(100%, 300px);
-  }
-
-  .hero-orbit li {
-    width: 48px;
-    height: 48px;
-    margin: -24px;
-  }
-
-  .hero-orbit li:nth-child(1) { transform: rotate(0deg) translateY(-108px); }
-  .hero-orbit li:nth-child(2) { transform: rotate(90deg) translateY(-108px); }
-  .hero-orbit li:nth-child(3) { transform: rotate(180deg) translateY(-108px); }
-  .hero-orbit li:nth-child(4) { transform: rotate(270deg) translateY(-108px); }
-
-  .hero-showcase__card {
-    bottom: -6%;
-    min-width: 180px;
+  .hero-product {
+    width: min(100%, 320px);
   }
 
   .benefits-row {

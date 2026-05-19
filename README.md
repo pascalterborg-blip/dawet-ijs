@@ -34,9 +34,16 @@ npx serve .
 
 Het formulier gebruikt [FormSubmit](https://formsubmit.co). Vervang in `index.html` het e-mailadres `info@euredicekitchen.nl` door het echte adres en bevestig het via de mail van FormSubmit na de eerste aanmelding.
 
-## Foto’s vervangen (hogere kwaliteit)
+## Afbeeldingen
 
-Vervang `assets/images/people/euredice.png` door een scherpere versie (bij voorkeur **2000px+ breed**, JPG of WebP). Pas daarna in `css/styles.css` de variabelen `--photo-native-w` en `--photo-native-h` aan op de nieuwe pixelafmetingen.
+| Bestand | Gebruik |
+|---------|---------|
+| `assets/images/people/euredice.jpg` | Portret bij “Wie ben ik?” |
+| `assets/images/products/verpakking-voorkant.jpg` | Hero (verpakking) |
+| `assets/images/products/ijsje-stok.jpg` | Assortiment (ijsje) |
+| `assets/images/products/verpakking-label.jpg` | Assortiment (achterkant label) |
+
+Vervang een bestand door een scherpere versie met **dezelfde bestandsnaam** en push opnieuw naar Git.
 
 ## Nog optioneel toevoegen
 

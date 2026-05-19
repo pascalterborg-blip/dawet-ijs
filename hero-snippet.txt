@@ -1,0 +1,13 @@
+            <div class="hero-product" aria-label="Dawet IJs verpakking kokos en amandel">
+              <img src="assets/decoratives/hibiscus-small.svg" alt="" class="hero-product__decor" width="80" aria-hidden="true">
+              <img
+                class="hero-product__img"
+                src="assets/images/products/verpakking-voorkant.jpg"
+                srcset="assets/images/products/verpakking-voorkant.jpg 1023w"
+                sizes="(max-width: 480px) 90vw, 420px"
+                width="1023"
+                height="1537"
+                alt="Dawet IJs verpakking — kokos en amandel"
+                fetchpriority="high"
+                decoding="async">
+            </motion.div>

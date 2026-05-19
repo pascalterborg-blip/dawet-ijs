@@ -1,5 +1,16 @@
 # Deploy naar GitHub + Cloudflare Pages
 
+Je lokale project heeft al een **git commit** op branch `main`. Volg deze stappen om naar GitHub en Cloudflare te gaan.
+
+## Eenmalig: je Git-naam instellen (aanbevolen)
+
+Als Git vraagt wie je bent, voer één keer uit (vervang met je eigen naam en e-mail):
+
+```powershell
+git config --global user.name "Jouw Naam"
+git config --global user.email "jouw@email.com"
+```
+
 ## Stap 1 — GitHub repository aanmaken
 
 1. Ga naar [github.com/new](https://github.com/new)

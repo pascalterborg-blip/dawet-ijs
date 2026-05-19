@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#fbe8d3"/>
+  <!-- Fles melk -->
+  <path d="M42 22 h16 v6 h4 l-2 52 q0 4 -10 4 t-10 -4 l-2 -52 h4 z" fill="#ffffff" stroke="#6b3a47" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M44 32 h12 v44 q0 3 -6 3 t-6 -3 V32 z" fill="#fafafa"/>
+  <rect x="44" y="22" width="12" height="8" rx="1" fill="#c2185b" opacity="0.85"/>
+  <path d="M46 28 h8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M48 38 v36" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+</svg>

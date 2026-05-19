@@ -6,7 +6,7 @@ from PIL import Image, ImageFilter
 from rembg import new_session, remove
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "assets/images/products/verpakking-voorkant.jpg"
+SRC = ROOT / "assets/images/products/verpakking-voorkant.png"
 DST = SRC.with_suffix(".png")
 
 # Zachtere rand: kleinere erode + isnet-model

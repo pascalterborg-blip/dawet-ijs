@@ -365,7 +365,11 @@
         <img src="assets/icons/envelope.svg" alt="" width="24" height="24">
         Blijf als eerste op de hoogte!
       </p>
-      <form class="newsletter-form" action="/api/aanmelden" method="POST">
+      <form class="newsletter-form" action="https://formsubmit.co/Euredice.Wijnaldum@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nieuwsbrief Dawet IJs: nieuwe aanmelding">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://dawetijs.nl/#contact">
         <label for="email" class="visually-hidden">E-mailadres</label>
         <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Aanmelden</button>

@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="logo-link" aria-label="Dawet IJs — naar boven">
-        <img src="assets/logo/logo-horizontal.svg" alt="Dawet IJs" width="200" height="48">
+        <img src="assets/logo/logo-horizontal.svg" alt="Dawet IJs" width="300" height="96">
       </a>
       <button type="button" class="nav-toggle" aria-label="Menu openen" aria-expanded="false" id="nav-toggle">
         <span></span><span></span><span></span>
@@ -54,18 +54,21 @@
           </div>
           <div class="hero-visual">
             <div class="hero-product" aria-label="Dawet IJs verpakking kokos en amandel">
-              <img src="assets/decoratives/hibiscus-small.svg" alt="" class="hero-product__decor" width="80" aria-hidden="true">
-              <img
-                class="hero-product__img"
-                src="assets/images/products/verpakking-voorkant.jpg"
-                srcset="assets/images/products/verpakking-voorkant.jpg 1023w"
-                sizes="(max-width: 480px) 90vw, 420px"
-                width="1023"
-                height="1537"
-                alt="Dawet IJs verpakking — kokos en amandel"
-                fetchpriority="high"
-                decoding="async">
-            </div>
+              <picture>
+                <source
+                  type="image/png"
+                  srcset="assets/images/products/verpakking-voorkant.png 1023w">
+                <img
+                  class="hero-product__img"
+                  src="assets/images/products/verpakking-voorkant.jpg"
+                  srcset="assets/images/products/verpakking-voorkant.jpg 1023w"
+                  sizes="(max-width: 480px) min(90vw, 360px), 420px"
+                  width="1023"
+                  height="1537"
+                  alt="Dawet IJs verpakking — kokos en amandel"
+                  fetchpriority="high"
+                  decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -88,6 +91,7 @@
             <p>Zonder geraffineerde suikers</p>
           </article>
         </div>
+
       </div>
     </section>
 
@@ -121,24 +125,23 @@
               Ik ben <strong>Euredice</strong>, oprichter van Euredice's Kitchen. Met liefde maak ik
               tropische ijsjes die smaken naar warme herinneringen — romig, puur en vol karakter.
             </p>
+            <p class="tiktok-account">
+              Op TikTok deel ik recepten en inspiratie als
+              <strong>Lekkere gezonde recepten</strong>.
+            </p>
             <a href="https://www.tiktok.com/@eur273" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Volg mij op TikTok @eur273
+              Volg Lekkere gezonde recepten — @eur273
             </a>
           </article>
 
           <article class="story-card">
             <h2>Mijn verhaal</h2>
             <p>
-              Dawet IJs is geboren uit mijn passie voor Surinaamse en tropische smaken. Als klein meisje
-              leerde ik dawet kennen — een verfrissend dessert met kokos, parels en een zachte zoetheid.
-              Die herinnering wilde ik vastleggen in een ijsje dat je overal kunt meenemen.
-            </p>
-            <p>
-              Elke stick is gemaakt met kokosmelk, amandel, rozenwater en dadelsiroop in plaats van
-              geraffineerde suiker. Het resultaat? Een zachte, extra romige textuur die tropisch
-              aanvoelt bij elke hap.
+              Met Dawet IJs breng ik een geliefde tropische smaak naar een romig ijsje op een stokje —
+              gemaakt met kokos, amandel, rozenwater en dadelsiroop.
             </p>
             <p class="story-script">Een tropische beleving in elk ijsje.</p>
+            <p><a href="#dawet">Lees meer over dawet ↓</a></p>
           </article>
 
           <article class="dates-card" id="dadelsiroop">
@@ -170,8 +173,40 @@
             </ul>
           </article>
         </div>
+
+        <article class="dawet-story" id="dawet">
+          <h2>Wat is dawet?</h2>
+          <p>
+          Dawet is een traditionele zoete kokosdrank met roots in de Indonesische en Surinaamse keuken.
+          De drank staat bekend om zijn romige structuur, tropische smaak en herkenbare roze kleur.
+          </p>
+          <p>
+          De smaak van dawet is zacht, romig en verfrissend tegelijk — een combinatie van kokos,
+          amandel en rozenwater die perfect samenkomt in één tropische beleving. In Suriname drinken
+          veel mensen het ijskoud op warme dagen, vaak als echte comfortdrank vol nostalgie.
+          </p>
+          <p class="dawet-story__highlight">
+          Voor mij voelt dawet als: zomer, gezelligheid, familie en tropisch genieten in één slok 💗
+          </p>
+          <p>
+          Met Dawet IJs heb ik die bekende smaak vertaald naar een romig ijsje op een stokje. Denk aan:
+          </p>
+          <ul class="dawet-story__list">
+          <li>romige kokos,</li>
+          <li>zachte amandeltonen,</li>
+          <li>een vleugje rozenwater,</li>
+          <li>en die typische tropische dawet smaak waar je meteen blij van wordt.</li>
+          </ul>
+          <p class="dawet-story__closing">
+          Een beetje nostalgie.<br>
+          Een beetje tropen.<br>
+          En vooral héél erg lekker.
+          </p>
+        </article>
       </div>
     </section>
+
+
 
     <div class="wave-divider wave-divider--up" aria-hidden="true"></div>
 
@@ -231,15 +266,20 @@
         <div class="assortiment-grid">
           <article class="assortiment-product">
             <div class="product-photo">
-              <img
-                src="assets/images/products/ijsje-stok.jpg"
-                srcset="assets/images/products/ijsje-stok.jpg 1086w"
-                sizes="120px"
-                width="1086"
-                height="1448"
-                alt="Dawet IJs op een stokje"
-                loading="lazy"
-                decoding="async">
+              <picture>
+                <source
+                  type="image/png"
+                  srcset="assets/images/products/ijsje-stok.png 1086w">
+                <img
+                  src="assets/images/products/ijsje-stok.jpg"
+                  srcset="assets/images/products/ijsje-stok.jpg 1086w"
+                  sizes="160px"
+                  width="1086"
+                  height="1448"
+                  alt="Dawet IJs op een stokje"
+                  loading="lazy"
+                  decoding="async">
+              </picture>
             </div>
             <div>
               <h3>Dawet IJs<br>Kokos &amp; amandel</h3>
@@ -285,7 +325,8 @@
         <div class="journey-grid">
           <article>
             <p class="journey-intro">
-              Blijf op de hoogte van recepten, behind the scenes en de lancering van nieuwe smaken.
+              Euredice post op TikTok onder de naam <strong>Lekkere gezonde recepten</strong>
+              (@eur273) — recepten, behind the scenes en nieuws over Dawet IJs.
             </p>
             <ul class="journey-list">
               <li><img src="assets/icons/heart.svg" alt="" width="16" height="16"> Recepten &amp; tips met dadelsiroop</li>
@@ -297,7 +338,8 @@
           <div class="phone-mockup">
             <div class="phone-mockup-inner">
               <img src="assets/social/tiktok.svg" alt="" class="social-large" width="48" height="48">
-              <p><strong>@eur273</strong> op TikTok</p>
+              <p><strong>Lekkere gezonde recepten</strong></p>
+              <p class="tiktok-handle">@eur273 op TikTok</p>
               <a href="https://www.tiktok.com/@eur273" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Bekijk profiel</a>
             </div>
           </div>
@@ -330,10 +372,11 @@
         <img src="assets/icons/envelope.svg" alt="" width="24" height="24">
         Blijf als eerste op de hoogte!
       </p>
-      <form class="newsletter-form" action="https://formsubmit.co/info@euredicekitchen.nl" method="POST">
-        <input type="hidden" name="_subject" value="Nieuwsbrief Dawet IJs">
+      <form class="newsletter-form" action="https://formsubmit.co/Euredice.Wijnaldum@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nieuwsbrief Dawet IJs — nieuwe aanmelding">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://dawetijs.nl/#contact">
         <label for="email" class="visually-hidden">E-mailadres</label>
         <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Aanmelden</button>
@@ -345,7 +388,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo/logo-horizontal-light.svg" alt="Dawet IJs — Euredice's Kitchen" width="200" height="56">
+          <img src="assets/logo/logo-horizontal-light.svg" alt="Dawet IJs — Euredice's Kitchen" width="300" height="96">
           <p>
             Tropisch ijs met een zacht hart. Gemaakt met kokos, amandel, rozenwater en dadelsiroop —
             voor iedereen die houdt van pure, eerlijke smaken.
@@ -366,7 +409,7 @@
             <li><a href="#contact">Bestellen</a></li>
             <li><a href="#contact">Veelgestelde vragen</a></li>
             <li><a href="#contact">Verzending</a></li>
-            <li><a href="mailto:info@euredicekitchen.nl">info@euredicekitchen.nl</a></li>
+            <li><a href="mailto:Euredice.Wijnaldum@gmail.com">Euredice.Wijnaldum@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -379,7 +422,9 @@
               <img src="assets/social/instagram.svg" alt="" width="20" height="20">
             </a>
           </div>
-          <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">@eur273</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.85;">
+            Lekkere gezonde recepten<br>@eur273
+          </p>
         </div>
         <div class="footer-love-col">
           <img src="assets/icons/heart.svg" alt="" width="32" height="32">

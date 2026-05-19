@@ -161,9 +161,15 @@ a:hover {
   min-height: var(--header-h);
 }
 
+.logo-link {
+  flex-shrink: 0;
+}
+
 .logo-link img {
+  display: block;
   height: 48px;
   width: auto;
+  max-width: min(150px, 42vw);
 }
 
 .nav-toggle {
@@ -287,29 +293,38 @@ a:hover {
   justify-content: center;
 }
 
-/* Hero — productfoto verpakking */
+/* Hero — productfoto verpakking (transparante PNG) */
 .hero-product {
   position: relative;
   width: min(100%, 420px);
   margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.hero-product::before {
+  content: "";
+  position: absolute;
+  inset: 8% 5% 0;
+  background: radial-gradient(
+    ellipse 85% 75% at 50% 42%,
+    rgba(251, 232, 211, 0.95) 0%,
+    rgba(253, 238, 240, 0.5) 45%,
+    transparent 72%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-product picture,
 .hero-product__img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
-  border-radius: var(--radius-card);
-  box-shadow: 0 20px 48px rgba(74, 37, 48, 0.18);
-  background: var(--white);
-}
-
-.hero-product__decor {
-  position: absolute;
-  top: -8px;
-  right: -12px;
-  width: 72px;
-  z-index: 2;
-  pointer-events: none;
-  filter: drop-shadow(0 4px 8px rgba(194, 24, 91, 0.2));
+  object-fit: contain;
+  filter: drop-shadow(0 16px 32px rgba(74, 37, 48, 0.22));
 }
 
 /* Legacy showcase (unused) */
@@ -583,6 +598,88 @@ a:hover {
   margin-top: 2px;
 }
 
+.tiktok-account {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.tiktok-account strong {
+  color: var(--pink-deep);
+}
+
+.dawet-story {
+  margin-top: 2.5rem;
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow);
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.dawet-story h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--pink-deep);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.dawet-story p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.dawet-story__highlight {
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  color: var(--pink-deep);
+  text-align: center;
+  line-height: 1.45;
+  margin: 1.5rem 0;
+}
+
+.dawet-story__list {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.dawet-story__list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+}
+
+.dawet-story__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pink-deep);
+  font-weight: 700;
+}
+
+.dawet-story__closing {
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  color: var(--pink-deep);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.tiktok-handle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
 /* Ingredients */
 .ingredients-section {
   background: var(--white);
@@ -650,19 +747,36 @@ a:hover {
 }
 
 .product-photo {
-  width: 112px;
+  position: relative;
+  width: 150px;
   flex-shrink: 0;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
 
+.product-photo::before {
+  content: "";
+  position: absolute;
+  inset: 5% 0;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 45%,
+    var(--pink-soft) 0%,
+    transparent 72%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.product-photo picture,
 .product-photo img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(74, 37, 48, 0.18));
 }
 
 .assortiment-product h3 {
@@ -1108,7 +1222,7 @@ a:hover {
   }
 
   .hero-product {
-    width: min(100%, 320px);
+    width: min(92vw, 360px);
   }
 
   .benefits-row {
@@ -1177,6 +1291,11 @@ a:hover {
   .assortiment-product {
     flex-direction: column;
     text-align: center;
+  }
+
+  .product-photo {
+    width: min(200px, 55vw);
+    margin-inline: auto;
   }
 
   .flavor-tags {

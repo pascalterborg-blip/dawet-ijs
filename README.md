@@ -32,7 +32,7 @@ npx serve .
 
 ## Nieuwsbrief
 
-Het formulier gebruikt [FormSubmit](https://formsubmit.co). Vervang in `index.html` het e-mailadres `info@euredicekitchen.nl` door het echte adres en bevestig het via de mail van FormSubmit na de eerste aanmelding.
+Het formulier gebruikt [FormSubmit](https://formsubmit.co) en stuurt aanmeldingen naar `Euredice.Wijnaldum@gmail.com`. Na de eerste testaanmelding moet je het adres bevestigen via de e-mail van FormSubmit.
 
 ## Afbeeldingen
 

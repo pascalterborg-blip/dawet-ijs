@@ -17,21 +17,21 @@ export default {
 async function handleNewsletter(request, env, url) {
   const to = env.NEWSLETTER_EMAIL;
   if (!to) {
-    return Response.redirect(`${url.origin}/?fout=config#contact`, 303);
+    return Response.redirect(`${url.origin}/?fout=config#nieuwsbrief`, 303);
   }
 
   const form = await request.formData();
   const email = String(form.get("email") || "").trim();
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return Response.redirect(`${url.origin}/?fout=email#contact`, 303);
+    return Response.redirect(`${url.origin}/?fout=email#nieuwsbrief`, 303);
   }
 
   const sent = await sendViaMailchannels(to, email);
   if (!sent) {
-    return Response.redirect(`${url.origin}/?fout=verzenden#contact`, 303);
+    return Response.redirect(`${url.origin}/?fout=verzenden#nieuwsbrief`, 303);
   }
 
-  return Response.redirect(`${url.origin}/?bedankt=1#contact`, 303);
+  return Response.redirect(`${url.origin}/?bedankt=1#nieuwsbrief`, 303);
 }
 
 async function sendViaMailchannels(to, subscriberEmail) {

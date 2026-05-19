@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dawet IJs van Euredice's Kitchen: tropisch ijs op kokos en amandel, zoet met dadelsiroop. Romig, verfrissend en natuurlijk.">
-  <title>Dawet IJs | Euredice's Kitchen | Kokos &amp; Amandel</title>
+  <meta name="description" content="Dawet IJs: romig ijs op een stokje, geïnspireerd op dawet. Met kokos, amandel, rozenwater en dadelsiroop, zonder geraffineerde suikers. Schrijf je in voor het startnieuws.">
+  <title>Dawet IJs | Romig ijs op een stokje | Euredice's Kitchen</title>
   <link rel="icon" href="assets/logo/euredices-kitchen-logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,18 +18,22 @@
       <a href="#home" class="logo-link" aria-label="Euredice's Kitchen, naar boven">
         <img src="assets/logo/euredices-kitchen-logo.svg" alt="Euredice's Kitchen" width="1536" height="1024">
       </a>
-      <button type="button" class="nav-toggle" aria-label="Menu openen" aria-expanded="false" id="nav-toggle">
-        <span></span><span></span><span></span>
-      </button>
       <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
         <ul>
           <li><a href="#home">Home</a></li>
+          <li><a href="#waarom">Waarom anders</a></li>
           <li><a href="#verhaal">Ons verhaal</a></li>
           <li><a href="#ingredienten">Ingrediënten</a></li>
-          <li><a href="#voordelen">Voordelen</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#nieuwsbrief">Nieuwsbrief</a></li>
         </ul>
+        <p class="nav-mobile-cta">
+          <a href="#nieuwsbrief" class="btn btn-primary">Blijf op de hoogte</a>
+        </p>
       </nav>
+      <a href="#nieuwsbrief" class="btn btn-primary header-cta">Blijf op de hoogte</a>
+      <button type="button" class="nav-toggle" aria-label="Menu openen" aria-expanded="false" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -39,11 +43,21 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <p class="hero-tagline">Tropisch • genieten •</p>
+            <p class="hero-badge">Lancering in voorbereiding</p>
             <h1 class="hero-title">Dawet IJs</h1>
-            <p class="hero-flavor">Kokos &amp; amandel</p>
-            <p class="hero-sub">Romig • verfrissend • tropisch</p>
-            <a href="#verhaal" class="btn btn-primary">Ontdek Dawet IJs</a>
+            <p class="hero-lead">
+              Romig <strong>ijs op een stokje</strong>, geïnspireerd op <strong>dawet</strong>: de tropische
+              kokosdrank uit de Surinaamse keuken. Smaakprofiel <strong>kokos &amp; amandel</strong>.
+            </p>
+            <ul class="hero-points">
+              <li>Met kokos, amandel, rozenwater en dadelsiroop</li>
+              <li>Zonder geraffineerde suikers</li>
+              <li>100% plantaardig</li>
+            </ul>
+            <div class="hero-actions">
+              <a href="#nieuwsbrief" class="btn btn-primary">Blijf op de hoogte</a>
+              <a href="https://www.tiktok.com/@eur273" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Volg op TikTok</a>
+            </div>
           </div>
           <div class="hero-visual">
             <div class="hero-product" aria-label="Dawet IJs verpakking kokos en amandel">
@@ -66,23 +80,26 @@
           </div>
         </div>
 
-        <div class="benefits-row" id="voordelen">
-          <article class="benefit-item">
-            <img src="assets/benefits/benefit-coconut.svg" alt="" width="72" height="72">
-            <p>Rijk aan kokos</p>
-          </article>
-          <article class="benefit-item">
-            <img src="assets/benefits/benefit-almond.svg" alt="" width="72" height="72">
-            <p>Met amandel &amp; rozenwater</p>
-          </article>
-          <article class="benefit-item">
-            <img src="assets/benefits/benefit-natural.svg" alt="" width="72" height="72">
-            <p>Natuurlijke ingrediënten</p>
-          </article>
-          <article class="benefit-item">
-            <img src="assets/benefits/benefit-no-sugar.svg" alt="" width="72" height="72">
-            <p>Zonder geraffineerde suikers</p>
-          </article>
+        <div class="hero-why" id="waarom">
+          <h2 class="hero-why__title">Waarom Dawet IJs anders is</h2>
+          <div class="benefits-row">
+            <article class="benefit-item">
+              <img src="assets/benefits/benefit-coconut.svg" alt="" width="72" height="72">
+              <p>Kokos als basis</p>
+            </article>
+            <article class="benefit-item">
+              <img src="assets/benefits/benefit-almond.svg" alt="" width="72" height="72">
+              <p>Amandel &amp; rozenwater</p>
+            </article>
+            <article class="benefit-item">
+              <img src="assets/benefits/benefit-natural.svg" alt="" width="72" height="72">
+              <p>Herkenbare ingrediënten</p>
+            </article>
+            <article class="benefit-item">
+              <img src="assets/benefits/benefit-no-sugar.svg" alt="" width="72" height="72">
+              <p>Geen geraffineerde suikers</p>
+            </article>
+          </div>
         </div>
 
       </div>
@@ -115,26 +132,30 @@
               <img src="assets/decoratives/hibiscus-small.svg" alt="" class="portrait-frame__accent" width="72" aria-hidden="true">
             </div>
             <p>
-              Ik ben <strong>Euredice</strong>, oprichter van Euredice's Kitchen. Met liefde maak ik
-              tropische ijsjes die smaken naar warme herinneringen, romig, puur en vol karakter.
+              Ik ben <strong>Euredice</strong>, oprichter van Euredice's Kitchen. Dawet IJs is mijn manier om
+              een geliefde tropische smaak te delen: eerlijk gemaakt, met herkenbare ingrediënten.
             </p>
             <p class="tiktok-account">
-              Op TikTok deel ik recepten en inspiratie als
-              <strong>Lekkere gezonde recepten</strong>.
+              Op TikTok deel ik recepten en updates als
+              <a href="https://www.tiktok.com/@eur273" target="_blank" rel="noopener noreferrer"><strong>Lekkere gezonde recepten</strong> (@eur273)</a>.
             </p>
-            <a href="https://www.tiktok.com/@eur273" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Volg Lekkere gezonde recepten (@eur273)
-            </a>
           </article>
 
           <article class="story-card">
             <h2>Mijn verhaal</h2>
             <p>
-              Met Dawet IJs breng ik een geliefde tropische smaak naar een romig ijsje op een stokje,
-              gemaakt met kokos, amandel, rozenwater en dadelsiroop.
+              Dawet is een traditionele kokosdrank uit de Surinaamse keuken. De smaak van kokos,
+              amandel en rozenwater brengt voor mij pure nostalgie.
             </p>
+            <p>
+              Ik wilde dit gevoel vertalen naar een ijsje, maar dan op een bewuste manier: met
+              natuurlijke ingrediënten en zonder geraffineerde suikers.
+            </p>
+            <p>Na maanden testen en perfectioneren ontstond Dawet IJs.</p>
             <p class="story-script">Een tropische beleving in elk ijsje.</p>
-            <p><a href="#dawet">Lees meer over dawet ↓</a></p>
+            <p class="story-card__heart" aria-hidden="true">
+              <img src="assets/icons/heart.svg" alt="" width="24" height="24">
+            </p>
           </article>
 
           <article class="dates-card" id="dadelsiroop">
@@ -174,27 +195,18 @@
           De drank staat bekend om zijn romige structuur, tropische smaak en herkenbare roze kleur.
           </p>
           <p>
-          De smaak van dawet is zacht, romig en verfrissend tegelijk, een combinatie van kokos,
-          amandel en rozenwater die perfect samenkomt in één tropische beleving. In Suriname drinken
-          veel mensen het ijskoud op warme dagen, vaak als echte comfortdrank vol nostalgie.
-          </p>
-          <p class="dawet-story__highlight">
-          Voor mij voelt dawet als: zomer, gezelligheid, familie en tropisch genieten in één slok 💗
+          De smaak combineert kokos, amandel en rozenwater. In Suriname drinken veel mensen dawet
+          ijskoud op warme dagen, vaak als comfortdrank vol herinneringen.
           </p>
           <p>
-          Met Dawet IJs heb ik die bekende smaak vertaald naar een romig ijsje op een stokje. Denk aan:
+          Met Dawet IJs heb ik die smaak vertaald naar een romig ijsje op een stokje. Denk aan:
           </p>
           <ul class="dawet-story__list">
           <li>romige kokos,</li>
           <li>zachte amandeltonen,</li>
           <li>een vleugje rozenwater,</li>
-          <li>en die typische tropische dawet smaak waar je meteen blij van wordt.</li>
+          <li>en die herkenbare dawet-smaak in ijsvorm.</li>
           </ul>
-          <p class="dawet-story__closing">
-          Een beetje nostalgie.<br>
-          Een beetje tropen.<br>
-          En vooral héél erg lekker.
-          </p>
         </article>
       </div>
     </section>
@@ -211,6 +223,7 @@
           Onze ingrediënten
           <img src="assets/icons/ornament-right.svg" alt="" class="ornament" width="28" height="28" aria-hidden="true">
         </h2>
+        <p class="section-lead">Wat er in zit, en waarom dat telt voor de smaak.</p>
         <div class="ingredients-grid">
           <div class="ingredient-item">
             <div class="icon-wrap"><img src="assets/ingredients/ingredient-kokosmelk.svg" alt=""></div>
@@ -276,14 +289,14 @@
             </div>
             <div>
               <h3>Dawet IJs<br>Kokos &amp; amandel</h3>
-              <p>Zachte &amp; extra romige textuur. Tropisch genieten in handige verpakking.</p>
+              <p>Romig ijs op een stokje. Eerste smaak, nu in voorbereiding voor de lancering.</p>
               <ul class="flavor-tags">
                 <li>Kokos</li>
                 <li>Amandel</li>
                 <li>Rozenwater</li>
                 <li>Dadelsiroop</li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Binnenkort meer smaken</a>
+              <a href="#nieuwsbrief" class="btn btn-outline">Meld me bij de lancering</a>
             </div>
           </article>
           <div class="product-label-card">
@@ -333,18 +346,19 @@
               <img src="assets/social/tiktok.svg" alt="" class="social-large" width="48" height="48">
               <p><strong>Lekkere gezonde recepten</strong></p>
               <p class="tiktok-handle">@eur273 op TikTok</p>
-              <a href="https://www.tiktok.com/@eur273" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Bekijk profiel</a>
+              <a href="https://www.tiktok.com/@eur273" class="link-secondary" target="_blank" rel="noopener noreferrer">Bekijk @eur273 op TikTok</a>
             </div>
           </div>
-          <article class="coming-card">
+          <article class="coming-card" id="lancering">
             <div class="icon-title">
               <img src="assets/icons/calendar.svg" alt="" width="32" height="32">
-              <h3>Binnenkort verkrijgbaar</h3>
+              <h3>Lancering in voorbereiding</h3>
             </div>
             <p>
-              Dawet IJs komt binnenkort bij geselecteerde verkooppunten en online beschikbaar.
-              Schrijf je in voor de nieuwsbrief en wees als eerste op de hoogte.
+              We werken aan de eerste verkooppunten in Nederland. Schrijf je in en ontvang als eerste
+              nieuws over proeverijen, beschikbaarheid en nieuwe smaken.
             </p>
+            <a href="#nieuwsbrief" class="btn btn-primary">Schrijf je in</a>
           </article>
         </div>
       </div>
@@ -354,29 +368,25 @@
     <section class="teaser-section" aria-label="Aankondiging">
       <img src="assets/decoratives/hibiscus-large.svg" alt="" class="teaser-decor teaser-decor--left" width="280" height="280" aria-hidden="true">
       <img src="assets/decoratives/palm-fan.svg" alt="" class="teaser-decor teaser-decor--right" width="200" height="200" aria-hidden="true">
-      <p>Stay tuned for something tropical…</p>
+      <div class="teaser-section__inner">
+        <h2 class="teaser-section__title">Klaar voor de lancering?</h2>
+        <p class="teaser-section__text">Schrijf je in en hoor als eerste waar je Dawet IJs kunt proeven.</p>
+        <a href="#nieuwsbrief" class="btn btn-primary">Blijf op de hoogte</a>
+      </div>
     </section>
   </main>
 
   <!-- Contact -->
-  <section class="contact-section" id="contact" aria-label="Contact">
+  <section class="contact-section" id="contact" aria-label="Nieuwsbrief en contact">
     <div class="container contact-section__inner">
-      <h2 class="contact-section__title">Contact</h2>
+      <h2 class="contact-section__title" id="nieuwsbrief">Blijf op de hoogte</h2>
       <p class="contact-section__intro">
-        Vragen over Dawet IJs, verkooppunten of samenwerking? Stuur ons een bericht via TikTok.
-        Wil je op de hoogte blijven van nieuws en proeverijen? Schrijf je hieronder in.
+        Ontvang het startnieuws over Dawet IJs: proeverijen, verkooppunten en nieuwe smaken.
+        Geen spam, alleen updates over de lancering.
       </p>
 
-      <div class="contact-channels">
-        <a href="https://www.tiktok.com/@eur273" class="btn btn-primary contact-channels__tiktok" target="_blank" rel="noopener noreferrer">
-          <img src="assets/social/tiktok.svg" alt="" width="22" height="22">
-          Bericht via TikTok (@eur273)
-        </a>
-      </div>
-
-      <div class="contact-newsletter" id="nieuwsbrief">
-        <h3 class="contact-newsletter__title">Nieuwsbrief</h3>
-        <p class="contact-newsletter__text">Blijf als eerste op de hoogte van Dawet IJs.</p>
+      <div class="contact-newsletter">
+        <p class="contact-newsletter__text">Schrijf je e-mail in en we laten je weten zodra er nieuws is.</p>
         <p class="newsletter-feedback newsletter-feedback--ok" id="newsletter-ok" hidden role="status">
           Bedankt! Je bent aangemeld.
         </p>
@@ -386,9 +396,14 @@
         <form class="newsletter-form" action="/api/aanmelden" method="POST">
           <label for="email" class="visually-hidden">E-mailadres voor de nieuwsbrief</label>
           <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
-          <button type="submit" class="btn btn-primary">Aanmelden</button>
+          <button type="submit" class="btn btn-primary">Inschrijven</button>
         </form>
       </div>
+
+      <p class="contact-section__secondary">
+        Vragen over verkoop of samenwerking?
+        <a href="https://www.tiktok.com/@eur273" target="_blank" rel="noopener noreferrer">Stuur een bericht via TikTok (@eur273)</a>.
+      </p>
     </div>
   </section>
 
@@ -398,9 +413,10 @@
         <div class="footer-brand">
           <img src="assets/logo/euredices-kitchen-logo.svg" alt="Euredice's Kitchen" width="1536" height="1024">
           <p>
-            Tropisch ijs met een zacht hart. Gemaakt met kokos, amandel, rozenwater en dadelsiroop,
-            voor iedereen die houdt van pure, eerlijke smaken.
+            Romig ijs op een stokje, geïnspireerd op dawet. Gemaakt met kokos, amandel, rozenwater
+            en dadelsiroop.
           </p>
+          <a href="#nieuwsbrief" class="btn btn-primary footer-brand__cta">Blijf op de hoogte</a>
         </div>
         <div class="footer-col">
           <h4>Snel naar</h4>
@@ -408,7 +424,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#verhaal">Ons verhaal</a></li>
             <li><a href="#ingredienten">Ingrediënten</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#nieuwsbrief">Nieuwsbrief</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -439,7 +455,7 @@
       <img src="assets/social/tiktok.svg" alt="" width="22" height="22">
       TikTok
     </a>
-    <a href="#contact" class="mobile-bar__cta btn btn-primary">Contact</a>
+    <a href="#nieuwsbrief" class="mobile-bar__cta btn btn-primary">Blijf op de hoogte</a>
   </aside>
 
   <style>

@@ -242,7 +242,8 @@ a:hover {
   padding: 3rem 0 4rem;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 55% 45% at 12% 85%, rgba(176, 137, 71, 0.08), transparent),
+    radial-gradient(ellipse 80% 60% at 90% 20%, rgba(233, 30, 99, 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(176, 137, 71, 0.1), transparent),
     var(--pink-paper);
 }
 
@@ -396,10 +397,9 @@ a:hover {
   position: relative;
   display: flex;
   justify-content: center;
-  background: var(--pink-paper);
 }
 
-/* Hero — productfoto (achtergrond = pagina-roze) */
+/* Hero — productfoto verpakking (transparante PNG) */
 .hero-product {
   position: relative;
   width: min(100%, 420px);
@@ -407,17 +407,30 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--pink-paper);
 }
 
+.hero-product::before {
+  content: "";
+  position: absolute;
+  inset: 8% 5% 0;
+  background: radial-gradient(
+    ellipse 85% 75% at 50% 42%,
+    rgba(251, 232, 211, 0.95) 0%,
+    rgba(253, 238, 240, 0.5) 45%,
+    transparent 72%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-product picture,
 .hero-product__img {
   position: relative;
   z-index: 1;
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 10px 20px rgba(74, 37, 48, 0.14));
+  filter: drop-shadow(0 16px 32px rgba(74, 37, 48, 0.22));
 }
 
 /* Legacy showcase (unused) */

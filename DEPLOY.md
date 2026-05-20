@@ -79,24 +79,22 @@ Cloudflare bouwt automatisch opnieuw na elke push naar `main`.
 
 ## Nieuwsbrief (aanmeldingen)
 
-De site gebruikt **Mailchannels** via de Worker (geen FormSubmit meer).
+De site gebruikt **Web3Forms** via de Worker. (De oude gratis Mailchannels Workers-API werkt niet meer sinds 2024.)
 
-### 1. E-mailadres als secret (verplicht)
+### 1. Web3Forms access key (verplicht)
 
-Cloudflare-dashboard → **Workers & Pages** → **dawet-ijs** → **Settings** → **Variables and Secrets** → **Add**:
+1. Ga naar [web3forms.com](https://web3forms.com) en maak een gratis account met het e-mailadres waar aanmeldingen naartoe moeten (bijv. Gmail van Euredice).
+2. Kopieer je **Access Key**.
+3. Cloudflare-dashboard → **Workers & Pages** → **dawet-ijs** → **Settings** → **Variables and Secrets** → **Add**:
 
 | Naam | Type | Waarde |
 |------|------|--------|
-| `NEWSLETTER_EMAIL` | Secret | Gmail-adres van Euredice |
+| `WEB3FORMS_ACCESS_KEY` | Secret | je access key van web3forms.com |
 
-Of lokaal: `npx wrangler secret put NEWSLETTER_EMAIL`
+Verwijder het oude secret `NEWSLETTER_EMAIL` als dat nog staat (niet meer nodig).
 
-### 2. DNS voor verzenden (eenmalig)
+Lokaal testen: kopieer `.dev.vars.example` naar `.dev.vars` en vul je key in.
 
-Bij **dawetijs.nl** → **DNS** → voeg toe (als die nog niet bestaat):
+### 2. Testen
 
-| Type | Naam | Inhoud |
-|------|------|--------|
-| TXT | `@` | `v=spf1 include:relay.mailchannels.net ~all` |
-
-Daarna opnieuw deployen als je alleen het secret hebt toegevoegd.
+Na deploy: vul het formulier op https://dawetijs.nl in. Je zou een e-mail moeten ontvangen en de site toont “Bedankt! Je bent aangemeld.”

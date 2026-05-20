@@ -32,7 +32,7 @@ npx serve .
 
 ## Nieuwsbrief
 
-Nieuwsbrief-aanmeldingen gaan via de Cloudflare Worker + [Mailchannels](https://www.mailchannels.com/). Stel `NEWSLETTER_EMAIL` in als secret in Cloudflare (zie `DEPLOY.md`). Het adres staat niet op de website.
+Nieuwsbrief-aanmeldingen gaan via de Cloudflare Worker + [Web3Forms](https://web3forms.com/). Stel `WEB3FORMS_ACCESS_KEY` in als secret in Cloudflare (zie `DEPLOY.md`).
 
 ## Afbeeldingen
 

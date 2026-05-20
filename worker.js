@@ -1,6 +1,7 @@
 /**
- * Static site + newsletter via Mailchannels (geen FormSubmit).
- * Zet in Cloudflare: Workers → dawet-ijs → Settings → Secrets → NEWSLETTER_EMAIL
+ * Static site + nieuwsbrief via Web3Forms (Mailchannels Workers API is gestopt sinds 2024).
+ * Cloudflare secret: WEB3FORMS_ACCESS_KEY
+ * Aanmeldingen komen op het e-mailadres waarmee je bij web3forms.com registreert.
  */
 export default {
   async fetch(request, env) {
@@ -15,8 +16,8 @@ export default {
 };
 
 async function handleNewsletter(request, env, url) {
-  const to = env.NEWSLETTER_EMAIL;
-  if (!to) {
+  const accessKey = env.WEB3FORMS_ACCESS_KEY;
+  if (!accessKey) {
     return Response.redirect(`${url.origin}/?fout=config#nieuwsbrief`, 303);
   }
 
@@ -26,7 +27,7 @@ async function handleNewsletter(request, env, url) {
     return Response.redirect(`${url.origin}/?fout=email#nieuwsbrief`, 303);
   }
 
-  const sent = await sendViaMailchannels(to, email);
+  const sent = await sendViaWeb3Forms(accessKey, email);
   if (!sent) {
     return Response.redirect(`${url.origin}/?fout=verzenden#nieuwsbrief`, 303);
   }
@@ -34,26 +35,30 @@ async function handleNewsletter(request, env, url) {
   return Response.redirect(`${url.origin}/?bedankt=1#nieuwsbrief`, 303);
 }
 
-async function sendViaMailchannels(to, subscriberEmail) {
-  const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
+async function sendViaWeb3Forms(accessKey, subscriberEmail) {
+  const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
     body: JSON.stringify({
-      personalizations: [{ to: [{ email: to }] }],
-      from: {
-        email: "nieuwsbrief@dawetijs.nl",
-        name: "Dawet IJs",
-      },
-      reply_to: { email: subscriberEmail },
+      access_key: accessKey,
       subject: "Nieuwe nieuwsbriefaanmelding Dawet IJs",
-      content: [
-        {
-          type: "text/plain",
-          value: `Nieuwe aanmelding via dawetijs.nl\n\nE-mailadres: ${subscriberEmail}`,
-        },
-      ],
+      from_name: "Dawet IJs website",
+      email: subscriberEmail,
+      message: `Nieuwe aanmelding via dawetijs.nl\n\nE-mailadres: ${subscriberEmail}`,
     }),
   });
 
-  return response.ok;
+  if (!response.ok) {
+    return false;
+  }
+
+  try {
+    const data = await response.json();
+    return data.success === true;
+  } catch {
+    return false;
+  }
 }

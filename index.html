@@ -15,12 +15,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo-link" aria-label="Euredice's Kitchen, naar boven">
+      <a href="/#home" class="logo-link" aria-label="Euredice's Kitchen, naar boven">
         <img src="assets/logo/euredices-kitchen-logo.svg" alt="Euredice's Kitchen" width="1536" height="1024">
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Hoofdnavigatie">
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="/#home">Home</a></li>
           <li><a href="#waarom">Waarom anders</a></li>
           <li><a href="#verhaal">Ons verhaal</a></li>
           <li><a href="#ingredienten">Ingrediënten</a></li>
@@ -424,7 +424,7 @@
         <div class="footer-col">
           <h4>Snel naar</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/#home">Home</a></li>
             <li><a href="#verhaal">Ons verhaal</a></li>
             <li><a href="#ingredienten">Ingrediënten</a></li>
             <li><a href="#nieuwsbrief">Nieuwsbrief</a></li>
@@ -493,10 +493,17 @@
       var params = new URLSearchParams(window.location.search);
       var ok = document.getElementById('newsletter-ok');
       var err = document.getElementById('newsletter-err');
+      var hadFeedback = false;
       if (params.get('bedankt') === '1' && ok) {
         ok.hidden = false;
+        hadFeedback = true;
       } else if (params.get('fout') && err) {
         err.hidden = false;
+        hadFeedback = true;
+      }
+      if (hadFeedback && window.history.replaceState) {
+        var clean = window.location.pathname + (window.location.hash || '');
+        window.history.replaceState(null, '', clean);
       }
     })();
   </script>

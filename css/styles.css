@@ -365,7 +365,12 @@ a:hover {
 
 #nieuwsbrief,
 #waarom,
-#lancering {
+#lancering,
+#verkooppunten,
+#horeca,
+#evenementen,
+#reviews,
+#faq {
   scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 
@@ -1041,53 +1046,6 @@ a:hover {
   font-size: 1.1rem;
 }
 
-/* Tropical teaser */
-.teaser-section {
-  padding: 5rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.teaser-section__inner {
-  position: relative;
-  z-index: 1;
-  max-width: 28rem;
-  margin-inline: auto;
-  padding: 0 1rem;
-}
-
-.teaser-section__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
-  color: var(--pink-deep);
-  margin-bottom: 0.5rem;
-}
-
-.teaser-section__text {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.5;
-}
-
-.teaser-decor {
-  position: absolute;
-  pointer-events: none;
-}
-
-.teaser-decor--left {
-  left: 0;
-  bottom: 0;
-  width: min(280px, 40vw);
-}
-
-.teaser-decor--right {
-  right: 0;
-  top: 0;
-  width: min(200px, 35vw);
-}
-
 /* Contact */
 #contact {
   scroll-margin-top: calc(var(--header-h) + 1rem);
@@ -1466,12 +1424,6 @@ a:hover {
   .newsletter-form .btn {
     width: 100%;
   }
-
-  .teaser-decor--left,
-  .teaser-decor--right {
-    opacity: 0.5;
-    width: min(160px, 35vw);
-  }
 }
 
 @media (max-width: 520px) {
@@ -1511,6 +1463,323 @@ a:hover {
 
   .hero-actions .btn-outline {
     width: 100%;
+  }
+}
+
+/* Hero flyer */
+.hero-flyer {
+  display: block;
+  width: min(100%, 420px);
+  margin-inline: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(194, 24, 91, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-flyer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(194, 24, 91, 0.34);
+}
+
+.hero-flyer__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Verkooppunten */
+.verkooppunt-card {
+  position: relative;
+  max-width: 30rem;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid rgba(194, 24, 91, 0.15);
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(194, 24, 91, 0.12);
+}
+
+.verkooppunt-card__badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--pink-deep);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.verkooppunt-card__pin {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.verkooppunt-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--pink-deep);
+  margin-bottom: 1rem;
+}
+
+.verkooppunt-card__details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.verkooppunt-card__details li {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.verkooppunt-card__details strong {
+  color: var(--pink-deep);
+}
+
+.verkooppunt-note {
+  max-width: 30rem;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Flyer section (lower on page) */
+.flyer-section__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.flyer-section__image {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(194, 24, 91, 0.22);
+}
+
+.flyer-section__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flyer-section__text h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--pink-deep);
+  margin-bottom: 0.75rem;
+}
+
+.flyer-section__text p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(194, 24, 91, 0.12);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(194, 24, 91, 0.1);
+}
+
+.review-card__stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.15rem;
+  margin-bottom: 0.9rem;
+}
+
+.review-card blockquote {
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Feature lists (horeca / evenementen) */
+.feature-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 34rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.feature-list img {
+  flex-shrink: 0;
+}
+
+.feature-list--center {
+  max-width: 22rem;
+}
+
+.evenementen-minimum {
+  text-align: center;
+  font-weight: 700;
+  color: var(--pink-deep);
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 40rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(194, 24, 91, 0.12);
+  border-radius: 14px;
+  padding: 0 1.25rem;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  font-weight: 700;
+  color: var(--pink-deep);
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: var(--pink-deep);
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.faq-item a {
+  color: var(--pink-deep);
+  font-weight: 700;
+}
+
+/* Social section */
+.social-section {
+  text-align: center;
+}
+
+.social-section__inner {
+  max-width: 34rem;
+}
+
+.social-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--pink-deep);
+  margin-bottom: 0.5rem;
+}
+
+.social-section__text {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-section__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-section__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-section__btn img {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 900px) {
+  .flyer-section__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .flyer-section__image {
+    width: min(320px, 80vw);
+  }
+
+  .flyer-section__text p {
+    margin-inline: auto;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    max-width: 32rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-flyer {
+    width: min(88vw, 340px);
+  }
+
+  .verkooppunt-card {
+    padding: 1.75rem 1.25rem;
   }
 }
 

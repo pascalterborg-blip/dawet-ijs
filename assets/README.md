@@ -7,9 +7,10 @@ Alle assets zijn losse SVG-bestanden, klaar voor gebruik in Cursor / je webproje
 ```
 assets/
 ├── logo/
-│   ├── logo-horizontal.svg          # Hoofdlogo (palm + DAWET IJS naast elkaar)
+│   ├── euredices-kitchen-logo.svg   # Officieel logo Euredice's Kitchen
+│   ├── logo-horizontal.svg          # (oud) Dawet IJs wordmark
 │   ├── logo-vertical.svg            # Palm boven, tekst onder
-│   ├── logo-icon.svg                # Alleen palmboom-icoon (favicon, app icon)
+│   ├── logo-icon.svg                # Alleen palmboom-icoon
 │   └── logo-horizontal-light.svg    # Witte versie voor donkere achtergronden
 │
 ├── icons/

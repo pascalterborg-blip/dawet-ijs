@@ -75,7 +75,28 @@ git commit -m "Beschrijf je wijziging"
 git push
 ```
 
-Cloudflare bouwt automatisch opnieuw na elke push naar `main`.
+Elke push naar `main` start **GitHub Actions** (`.github/workflows/deploy.yml`) en deployt via Wrangler.
+
+### Eenmalig: GitHub secret voor deploy (verplicht)
+
+Zonder dit secret faalt de deploy en blijft de oude site online.
+
+1. Cloudflare → **My Profile** → **API Tokens** → **Create Token**
+2. Gebruik template **Edit Cloudflare Workers** (of maak een token met Workers Scripts: Edit)
+3. GitHub repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+4. Naam: `CLOUDFLARE_API_TOKEN`, waarde: je token
+
+Daarna: **Actions** → **Deploy to Cloudflare Workers** → **Re-run all jobs** (of push opnieuw).
+
+Handmatig deployen kan ook:
+
+```powershell
+cd "c:\Users\PCT01\Documents\Euredice Kitchen Website"
+npx wrangler login
+npx wrangler deploy
+```
+
+**Let op:** PR #1 van de Cloudflare-bot hoeft niet gemerged te worden. Die is vervangen door de huidige `wrangler.jsonc` + `.assetsignore` + GitHub Actions.
 
 ## Nieuwsbrief (aanmeldingen)
 

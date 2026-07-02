@@ -568,7 +568,13 @@
         <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-err" hidden role="alert">
           Aanmelden lukte niet. Probeer het later opnieuw of stuur een bericht via TikTok.
         </p>
-        <form class="newsletter-form" action="/api/aanmelden" method="POST">
+        <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-config-err" hidden role="alert">
+          Nieuwsbrief is nog niet geactiveerd. Stuur een bericht via TikTok (@eur273) om je in te schrijven.
+        </p>
+        <p class="newsletter-feedback newsletter-feedback--err" id="newsletter-email-err" hidden role="alert">
+          Vul een geldig e-mailadres in.
+        </p>
+        <form class="newsletter-form" id="newsletter-form" action="/api/aanmelden" method="POST" novalidate>
           <label for="email" class="visually-hidden">E-mailadres voor de nieuwsbrief</label>
           <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email">
           <button type="submit" class="btn btn-primary">Inschrijven</button>
@@ -668,18 +674,102 @@
       var params = new URLSearchParams(window.location.search);
       var ok = document.getElementById('newsletter-ok');
       var err = document.getElementById('newsletter-err');
+      var configErr = document.getElementById('newsletter-config-err');
+      var emailErr = document.getElementById('newsletter-email-err');
       var hadFeedback = false;
+
+      function hideFeedback() {
+        [ok, err, configErr, emailErr].forEach(function (el) {
+          if (el) el.hidden = true;
+        });
+      }
+
       if (params.get('bedankt') === '1' && ok) {
+        hideFeedback();
         ok.hidden = false;
         hadFeedback = true;
+      } else if (params.get('fout') === 'config' && configErr) {
+        hideFeedback();
+        configErr.hidden = false;
+        hadFeedback = true;
+      } else if (params.get('fout') === 'email' && emailErr) {
+        hideFeedback();
+        emailErr.hidden = false;
+        hadFeedback = true;
       } else if (params.get('fout') && err) {
+        hideFeedback();
         err.hidden = false;
         hadFeedback = true;
       }
+
       if (hadFeedback && window.history.replaceState) {
         var clean = window.location.pathname + (window.location.hash || '');
         window.history.replaceState(null, '', clean);
       }
+
+      var form = document.getElementById('newsletter-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        hideFeedback();
+
+        var emailInput = form.querySelector('#email');
+        var email = String(emailInput && emailInput.value || '').trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          if (emailErr) emailErr.hidden = false;
+          return;
+        }
+
+        var submitButton = form.querySelector('button[type="submit"]');
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Bezig...';
+        }
+
+        try {
+          var configResponse = await fetch('/api/newsletter-config', {
+            headers: { Accept: 'application/json' },
+          });
+
+          if (!configResponse.ok) {
+            if (configErr) configErr.hidden = false;
+            return;
+          }
+
+          var config = await configResponse.json();
+          var response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({
+              access_key: config.accessKey,
+              subject: 'Nieuwe nieuwsbriefaanmelding Dawet IJs',
+              from_name: 'Dawet IJs website',
+              email: email,
+              message: 'Nieuwe aanmelding via dawetijs.nl\n\nE-mailadres: ' + email,
+            }),
+          });
+
+          var data = await response.json();
+          if (response.ok && data.success) {
+            form.reset();
+            if (ok) ok.hidden = false;
+            return;
+          }
+
+          if (err) err.hidden = false;
+        } catch (submitError) {
+          if (err) err.hidden = false;
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Inschrijven';
+          }
+        }
+      });
     })();
   </script>
 </body>

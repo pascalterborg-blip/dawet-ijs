@@ -7,6 +7,10 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    if (url.pathname === "/api/newsletter-config" && request.method === "GET") {
+      return handleNewsletterConfig(env);
+    }
+
     if (url.pathname === "/api/aanmelden" && request.method === "POST") {
       return handleNewsletter(request, env, url);
     }
@@ -14,6 +18,22 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
+function handleNewsletterConfig(env) {
+  const accessKey = env.WEB3FORMS_ACCESS_KEY;
+  if (!accessKey) {
+    return Response.json({ ok: false }, { status: 503 });
+  }
+
+  return Response.json(
+    { ok: true, accessKey },
+    {
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    }
+  );
+}
 
 async function handleNewsletter(request, env, url) {
   const accessKey = env.WEB3FORMS_ACCESS_KEY;

@@ -3,18 +3,12 @@
   "name": "dawet-ijs",
   "main": "worker.js",
   "compatibility_date": "2026-05-19",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
     "directory": ".",
-    "exclude": [
-      ".git/**",
-      ".wrangler/**",
-      "design/**",
-      "DEPLOY.md",
-      "README.md",
-      "worker.js",
-      "scripts/**",
-      "assets/preview.html",
-      "assets/README.md"
-    ]
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }
